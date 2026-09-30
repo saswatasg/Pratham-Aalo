@@ -1,0 +1,41 @@
+/* Pratham Aalo design tokens — source of truth */
+:root,
+[data-theme='light'] {
+  --paper: #fbf6ec;
+  --surface: #ffffff;
+  --ink: #1f1b16;
+  --muted: #6b6257;
+  --indigo: #2b2f6b;
+  --rust: #c2542d;
+  --mustard: #e8a93b;
+  --sage: #6f8f72;
+  --night: #0b0d1f;
+  --line: rgba(31, 27, 22, 0.12);
+  --shadow-warm: 0 12px 40px -12px rgba(194, 84, 45, 0.28), 0 4px 14px -6px rgba(31, 27, 22, 0.18);
+  --glow: 0 0 0 rgba(232, 169, 59, 0);
+  --dawn-gradient: linear-gradient(135deg, #2b2f6b 0%, #7a3a5e 34%, #c2542d 62%, #e8a93b 100%);
+  --sky-top: #23265e;
+  --sky-bottom: #fbf6ec;
+  --grain-opacity: 0.035;
+  --d-dawn: 1200ms;
+  --d-ray: 600ms;
+  --d-settle: 350ms;
+  --ease-dawn: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  --paper: #0b0d1f;
+  --surface: #14172e;
+  --ink: #f3ecdc;
+  --muted: #a79f92;
+  --indigo: #9aa0e8;
+  --rust: #e88054;
+  --mustard: #f2c063;
+  --sage: #93b596;
+  --night: #0b0d1f;
+  --line: rgba(243, 236, 220, 0.14);
+  --shadow-warm: 0 12px 44px -12px rgba(232, 169, 59, 0.32), 0 0 24px -6px rgba(232, 169, 59, 0.22);
+  --sky-top: #060716;
+  --sky-bottom: #14172e;
+  color-scheme: dark;
+}

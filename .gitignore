@@ -1,0 +1,11 @@
+.git
+.DS_Store
+node_modules/
+.next/
+out/
+dist/
+*.log
+.vercel
+.env*.local
+playwright-report/
+test-results/
