@@ -11,10 +11,10 @@ npm run build && npm start
 
 ## Edit copy
 - `src/content/en/common.json`, `src/content/bn/common.json` — nav, hero, footer. BN lines with `TODO: verify` need group review.
-- `src/data/*.json` — `team.json` (name+role+city only), `timeline.json` (5 phases, `here:true` = glowing node), `visits.json`, `ideas.json`, `library.json`, `faq.json`.
+- `src/data/*.json` — `team.json` (name+city+group only: core|volunteer), `timeline.json` (5 phases, `here:true` = glowing node), `visits.json`, `ideas.json`, `library.json`, `faq.json`.
 
 ## Add/remove team member
-Edit `src/data/team.json`: `{name,nick,group:core|volunteer,role,roleBn,city,cityBn,initial}`. Avatar = initial-in-sun, auto.
+Edit `src/data/team.json`: `{name,nick,group:core|volunteer,city,cityBn,initial}`. Avatar = initial-in-sun, auto. No individual roles — card shows Core Committee / Volunteer badge only.
 
 ## Swap Google Form URL
 Search `forms.gle/4sy1HH22JPNoBD7U6` in `src/` (Join + Footer + JoinBody) and replace.

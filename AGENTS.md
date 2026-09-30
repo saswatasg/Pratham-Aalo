@@ -1,7 +1,7 @@
 # AGENTS.md — for future AI/human edits
 
 - Honesty is the brand. Never claim: registration, school, site, donations, numbers, press, partners.
-- Names: `src/data/team.json` only. Name+role+city. No phones/emails/photos/family/health.
+- Names: `src/data/team.json` only. Name+city+group (core|volunteer). No individual roles. No phones/emails/photos/family/health.
 - No photos of children. Illustrations = inline SVG + alpana dividers only.
 - Third parties (SECMOL etc.) = text credit only, neutral, no logos.
 - Visits: keep neutral wording; do not publish sensitive reply statuses.

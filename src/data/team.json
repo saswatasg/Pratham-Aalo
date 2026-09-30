@@ -1,10 +1,10 @@
 [
-  { "name": "Sulagna Barat", "nick": "Nipa", "group": "core", "role": "Convener; partnerships; field visits", "roleBn": "আহ্বায়ক; অংশীদারিত্ব; মাঠ পরিদর্শন — TODO: verify", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "সু" },
-  { "name": "Saswata Subhra Sengupta", "nick": "Bhomlu", "group": "core", "role": "Systems, technology, documentation; teaching & content", "roleBn": "সিস্টেম, প্রযুক্তি, নথি; পড়ানো ও কনটেন্ট — TODO: verify", "city": "Kolkata", "cityBn": "কলকাতা", "initial": "সা" },
-  { "name": "Sudeshna Barat", "nick": "Baban", "group": "core", "role": "Vision & outreach; connecting people", "roleBn": "দৃষ্টি ও প্রচার; মানুষকে যুক্ত করা — TODO: verify", "city": "Kolkata", "cityBn": "কলকাতা", "initial": "সু" },
-  { "name": "Sumanta Mukherjee", "nick": "Kaku", "group": "core", "role": "Connections; survival-skill content; learning from existing schools", "roleBn": "যোগাযোগ; জীবন-দক্ষতা কনটেন্ট — TODO: verify", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "সু" },
-  { "name": "Julee Mukherjee", "nick": "Kakima", "group": "core", "role": "Connections; ties to Pathshala Baroda", "roleBn": "যোগাযোগ; পাঠশালা বরোদা সূত্র — TODO: verify", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "জু" },
-  { "name": "Payel Ray", "nick": "Maima", "group": "core", "role": "Teacher; hands-on learning ideas", "roleBn": "শিক্ষক; হাতে-কলমে শেখার ভাবনা — TODO: verify", "city": "Halisahar", "cityBn": "হালিশহর", "initial": "পে" },
-  { "name": "Pragati Thapa", "nick": "", "group": "volunteer", "role": "Volunteer; outreach & content", "roleBn": "স্বেচ্ছাসেবী; প্রচার ও কনটেন্ট — TODO: verify", "city": "Jalpaiguri", "cityBn": "জলপাইগুড়ি", "initial": "প্র" },
-  { "name": "Akib Javed", "nick": "", "group": "volunteer", "role": "Ground research in Murshidabad", "roleBn": "মুর্শিদাবাদে মাঠ-গবেষণা — TODO: verify", "city": "Murshidabad", "cityBn": "মুর্শিদাবাদ", "initial": "আ" }
+  { "name": "Sulagna Barat", "nick": "Nipa", "group": "core", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "সু" },
+  { "name": "Saswata Subhra Sengupta", "nick": "Bhomlu", "group": "core", "city": "Kolkata", "cityBn": "কলকাতা", "initial": "সা" },
+  { "name": "Sudeshna Barat", "nick": "Baban", "group": "core", "city": "Kolkata", "cityBn": "কলকাতা", "initial": "সু" },
+  { "name": "Sumanta Mukherjee", "nick": "Kaku", "group": "core", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "সু" },
+  { "name": "Julee Mukherjee", "nick": "Kakima", "group": "core", "city": "Chennai", "cityBn": "চেন্নাই", "initial": "জু" },
+  { "name": "Payel Ray", "nick": "Maima", "group": "core", "city": "Halisahar", "cityBn": "হালিশহর", "initial": "পে" },
+  { "name": "Pragati Thapa", "nick": "", "group": "volunteer", "city": "Jalpaiguri", "cityBn": "জলপাইগুড়ি", "initial": "প্র" },
+  { "name": "Akib Javed", "nick": "", "group": "volunteer", "city": "Murshidabad", "cityBn": "মুর্শিদাবাদ", "initial": "আ" }
 ]

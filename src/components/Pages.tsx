@@ -110,19 +110,20 @@ export function JourneyBody() {
 
 export function TeamBody() {
   const { lang } = useLang(); const en = lang !== 'bn';
-  const core = (team as { name: string; nick: string; group: string; role: string; roleBn: string; city: string; cityBn: string; initial: string }[]).filter(p => p.group === 'core');
-  const vol = (team as { name: string; nick: string; group: string; role: string; roleBn: string; city: string; cityBn: string; initial: string }[]).filter(p => p.group === 'volunteer');
-  const Card = ({ p }: { p: (typeof core)[number] }) => (
+  type Member = { name: string; nick: string; group: string; city: string; cityBn: string; initial: string };
+  const core = (team as Member[]).filter(p => p.group === 'core');
+  const vol = (team as Member[]).filter(p => p.group === 'volunteer');
+  const Card = ({ p }: { p: Member }) => (
     <TiltCard>
       <div className="flex items-center gap-3">
         <span className="flex h-12 w-12 items-center justify-center rounded-full font-serif text-xl font-bold text-white" style={{ background: 'var(--dawn-gradient)' }} lang="bn">{p.initial}</span>
         <div><p className="font-serif font-bold">{p.name}{p.nick ? ` (“${p.nick}”)` : ''}</p><p className="text-xs" style={{ color: 'var(--muted)' }}>{en ? p.city : p.cityBn}</p></div>
       </div>
-      <p className="mt-3 text-sm" style={{ color: 'var(--muted)' }}>{en ? p.role : p.roleBn}</p>
+      <p className="mt-3"><Chip tone={p.group === 'core' ? 'glow' : 'sage'}>{p.group === 'core' ? (en ? 'Core Committee' : 'মূল কমিটি') : (en ? 'Volunteer' : 'স্বেচ্ছাসেবী')}</Chip></p>
     </TiltCard>
   );
   return (
-    <Wrap kicker={en ? 'Team · real names only' : 'দল · আসল নাম'} title={en ? 'Family & friends, learning together' : 'পরিবার ও বন্ধুরা'} lede={en ? 'Name + role + city only. No photos, phones or personal emails. Edit anytime in team.json.' : 'শুধু নাম + ভূমিকা + শহর। — TODO: verify'}>
+    <Wrap kicker={en ? 'Team · real names only' : 'দল · আসল নাম'} title={en ? 'Family & friends, learning together' : 'পরিবার ও বন্ধুরা'} lede={en ? 'Name + city only — Core Committee or Volunteer. No photos, phones or personal emails. Edit anytime in team.json.' : 'শুধু নাম + শহর — মূল কমিটি বা স্বেচ্ছাসেবী। — TODO: verify'}>
       <h2 className="font-serif text-xl font-bold">{en ? 'Core committee' : 'মূল কমিটি'}</h2>
       <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{core.map(p => <Card key={p.name} p={p} />)}</div>
       <h2 className="mt-8 font-serif text-xl font-bold">{en ? 'Volunteers' : 'স্বেচ্ছাসেবী'}</h2>
