@@ -2,7 +2,6 @@
 import { Providers } from '@/context/AppContext';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { CeremonyOverlay } from '@/components/Ceremony';
 import { useEffect } from 'react';
 
 function Smooth() {
@@ -11,7 +10,7 @@ function Smooth() {
     if (reduced) return;
     let cleanup = () => {};
     import('lenis').then(({ default: Lenis }) => {
-      const lenis = new Lenis({ lerp: 0.1 });
+      const lenis = new Lenis({ lerp: 0.09 });
       const raf = (time: number) => { lenis.raf(time); requestAnimationFrame(raf); };
       const id = requestAnimationFrame(raf);
       cleanup = () => { cancelAnimationFrame(id); lenis.destroy(); };
@@ -27,7 +26,6 @@ export function Shell({ children, lang }: { children: React.ReactNode; lang?: 'e
       <Smooth />
       <div className="grain min-h-screen">
         <Navbar />
-        <CeremonyOverlay />
         {children}
         <Footer />
       </div>

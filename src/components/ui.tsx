@@ -4,20 +4,19 @@ export function Reveal({ children, delay = 0, className = '' }: { children: Reac
   const reduced = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   if (reduced) return <div className={className}>{children}</div>;
   return (
-    <motion.div className={className} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}>
+    <motion.div className={className} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-60px' }} transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}>
       {children}
     </motion.div>
   );
 }
 export function AlpanaDivider() {
   return (
-    <div className="mx-auto my-10 max-w-3xl px-4" aria-hidden>
-      <svg viewBox="0 0 600 40" className="w-full" fill="none" style={{ color: 'var(--rust)' }}>
-        <circle cx="300" cy="20" r="7" stroke="currentColor" strokeWidth="2" />
-        <circle cx="300" cy="20" r="2.5" fill="currentColor" />
-        <path d="M20 20 H260 M340 20 H580" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="1 10" />
-        <path d="M270 20 c 10 -12, 20 12, 30 0 M300 20" stroke="currentColor" strokeWidth="2" />
-        <path d="M120 20 l10 -8 10 8 -10 8 Z M470 20 l10 -8 10 8 -10 8 Z" stroke="currentColor" strokeWidth="1.6" />
+    <div className="mx-auto my-12 max-w-2xl px-6" aria-hidden>
+      <svg viewBox="0 0 600 32" className="w-full opacity-70" fill="none" style={{ color: 'var(--rust)' }}>
+        <circle cx="300" cy="16" r="4.5" stroke="currentColor" strokeWidth="1.25" />
+        <circle cx="300" cy="16" r="1.4" fill="currentColor" />
+        <path d="M40 16 H268 M332 16 H560" stroke="currentColor" strokeWidth="1" opacity="0.7" />
+        <path d="M120 16 l7 -6 7 6 -7 6 Z M466 16 l7 -6 7 6 -7 6 Z" stroke="currentColor" strokeWidth="1" opacity="0.8" />
       </svg>
     </div>
   );
@@ -25,10 +24,10 @@ export function AlpanaDivider() {
 export function Marquee({ words }: { words: string[] }) {
   const row = [...words, ...words];
   return (
-    <div className="overflow-hidden border-y py-3" style={{ borderColor: 'var(--line)', background: 'var(--surface)' }} aria-label="Bengali words marquee">
-      <div className="marquee-track font-serif text-xl" lang="bn">
+    <div className="overflow-hidden border-y py-2.5" style={{ borderColor: 'var(--line-soft)', background: 'var(--surface)' }} aria-label="Bengali words">
+      <div className="marquee-track font-serif text-[15px] tracking-wide" lang="bn" style={{ color: 'var(--muted)' }}>
         {row.map((w, i) => (
-          <span key={i} className="flex items-center gap-12"><span>{w}</span><span style={{ color: 'var(--mustard)' }}>✺</span></span>
+          <span key={i} className="flex items-center gap-10"><span>{w}</span><span style={{ color: 'var(--mustard)', fontSize: 10 }}>◆</span></span>
         ))}
       </div>
     </div>
@@ -36,14 +35,17 @@ export function Marquee({ words }: { words: string[] }) {
 }
 export function TiltCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`rim card-lift rounded-2xl border p-5 ${className}`} style={{ background: 'var(--surface)', borderColor: 'var(--line)', boxShadow: 'var(--shadow-warm)' }}
-      onMouseMove={(e) => { const el = e.currentTarget; const r = el.getBoundingClientRect(); el.style.setProperty('--mx', `${e.clientX - r.left}px`); el.style.setProperty('--my', `${e.clientY - r.top}px`); }}>
+    <div className={`card rounded-2xl border p-6 ${className}`} style={{ background: 'var(--surface)', borderColor: 'var(--line-soft)', boxShadow: '0 1px 2px rgba(33,28,21,.04)' }}>
       {children}
     </div>
   );
 }
 export function Chip({ children, tone = 'default' }: { children: React.ReactNode; tone?: 'default' | 'glow' | 'sage' }) {
-  const bg = tone === 'glow' ? 'linear-gradient(135deg,#C2542D,#E8A93B)' : tone === 'sage' ? 'var(--sage)' : 'transparent';
-  const color = tone === 'default' ? 'var(--muted)' : '#fff';
-  return <span className="inline-block rounded-full border px-3 py-1 text-xs font-semibold" style={{ borderColor: 'var(--line)', background: bg, color }}>{children}</span>;
+  const style =
+    tone === 'glow'
+      ? { borderColor: 'rgba(176,81,44,.35)', background: 'rgba(176,81,44,.08)', color: 'var(--rust-deep)' }
+      : tone === 'sage'
+        ? { borderColor: 'rgba(111,143,114,.35)', background: 'rgba(111,143,114,.1)', color: '#436147' }
+        : { borderColor: 'var(--line)', background: 'transparent', color: 'var(--muted)' };
+  return <span className="inline-block rounded-full border px-3 py-1 text-[11.5px] font-medium tracking-wide" style={style}>{children}</span>;
 }

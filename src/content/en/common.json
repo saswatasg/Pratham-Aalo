@@ -1,11 +1,11 @@
 {
-  "meta": { "title": "Pratham Aalo · Dawn — a learning collective", "description": "A Bengal-rooted learning collective. Children learn in Bengali, in their own place, through doing. We hope to open a school in ~5 years. No master plan — learning as we go." },
-  "brand": { "descriptor": "Pratham Aalo · Dawn — a learning collective" },
+  "meta": { "title": "Pratham Aalo — a learning collective", "description": "A Bengal-rooted learning collective. Children learn in Bengali, in their own place, through doing. We hope to open a school in ~5 years. No master plan — learning as we go." },
+  "brand": { "descriptor": "A learning collective" },
   "nav": { "why": "Why", "learn": "Learn", "now": "Now", "journey": "Journey", "team": "Team", "join": "Join", "library": "Library", "contact": "Contact", "brand": "Brand", "menu": "Menu", "close": "Close" },
   "hero": {
     "kicker": "West Bengal · local-first · since 20 July 2026",
     "titleA": "Pratham Aalo",
-    "titleB": "Dawn.",
+    "titleB": "প্রথম আলো",
     "lede": "A small group of friends learning how to build a place where every child in Bengal can learn in their own language, at their own pace, through doing. In about five years, we hope to open a school.",
     "tagline": "We don't have a master plan. We are learning as we go.",
     "cta1": "Join us", "cta2": "Why we exist", "note": "Not a school yet · Not registered yet · Not accepting donations"
