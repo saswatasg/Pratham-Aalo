@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useLang } from '@/context/AppContext';
 import { AlpanaDivider, Chip, Reveal, TiltCard } from '@/components/ui';
+import { Roadmap } from '@/components/Roadmap';
 import team from '@/data/team.json';
 import timeline from '@/data/timeline.json';
 import visits from '@/data/visits.json';
@@ -12,7 +13,7 @@ import faq from '@/data/faq.json';
 function Wrap({ kicker, title, lede, children }: { kicker: string; title: string; lede?: string; children: React.ReactNode }) {
   const { lang } = useLang();
   return (
-    <main id="main" className="mx-auto max-w-6xl px-5 py-14">
+    <main id="main" className="mx-auto max-w-6xl px-4 py-10 sm:px-5 md:py-14">
       <Reveal>
         <p className="eyebrow">{kicker}</p>
         <h1 className="fluid-h2 mt-3 max-w-3xl font-serif" lang={lang}>{title}</h1>
@@ -106,15 +107,7 @@ export function JourneyBody() {
         {past.map(([d, x]) => <li key={d} className="relative pb-7 pl-7"><span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full" style={{ background: 'var(--mustard)' }} /><p className="text-[11.5px] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--rust)' }}>{d}</p><p className="mt-1.5 max-w-2xl text-[14.5px] leading-relaxed">{x}</p></li>)}
       </ol>
       <h2 className="mt-6 font-serif text-[21px]">{en ? 'The five-year path' : 'পাঁচ বছরের পথ'}</h2>
-      <div className="mt-5 grid gap-4">
-        {(timeline as unknown[] as { phase: string; title: string; titleBn: string; desc: string; descBn: string; here?: boolean }[]).map(s => (
-          <div key={s.phase} className="flex gap-5 rounded-2xl border p-6" style={{ borderColor: s.here ? 'var(--rust)' : 'var(--line-soft)', background: 'var(--surface)' }}>
-            <div className="flex flex-col items-center"><span className="h-3 w-3 rounded-full" style={{ background: s.here ? 'var(--rust)' : 'var(--faint)' }} /><span className="w-px flex-1" style={{ background: 'var(--line-soft)' }} /></div>
-            <div><p className="text-[11.5px] font-semibold uppercase tracking-[0.14em]" style={{ color: 'var(--rust)' }}>{s.phase}{s.here && (en ? ' · We are here' : ' · আমরা এখানে')}</p>
-              <p className="mt-1 font-serif text-[19px]">{en ? s.title : s.titleBn}</p><p className="mt-1.5 max-w-2xl text-[14px] leading-relaxed" style={{ color: 'var(--muted)' }}>{en ? s.desc : s.descBn}</p></div>
-          </div>
-        ))}
-      </div>
+      <Roadmap />
     </Wrap>
   );
 }

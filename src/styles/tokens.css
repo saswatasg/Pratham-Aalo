@@ -1,22 +1,35 @@
-/* Pratham Aalo design tokens — source of truth (light, elegant day only) */
+/* Pratham Aalo design tokens — earth-rooted, light only */
 :root {
-  --paper: #faf7f0;
-  --surface: #ffffff;
-  --ink: #211c15;
+  --paper: #f7f3e9;
+  --paper-deep: #efe8d6;
+  --surface: #fffdf7;
+  --ink: #26211a;
+  --ink-soft: #3a332a;
   --muted: #6f665a;
-  --faint: #a39a8b;
+  --faint: #a89e8d;
+  --soil: #2b2f6b;
+  --clay: #b0512c;
+  --clay-deep: #8c3e20;
+  --straw: #c99a3c;
+  --straw-soft: #f1e3c0;
+  --leaf: #5f7f5e;
+  --leaf-soft: #dfe7da;
+  --river: #7fa8a0;
   --indigo: #2b2f6b;
   --rust: #b0512c;
   --rust-deep: #8c3e20;
   --mustard: #c99a3c;
-  --mustard-soft: #f3e4c2;
-  --sage: #6f8f72;
-  --line: rgba(33, 28, 21, 0.12);
-  --line-soft: rgba(33, 28, 21, 0.07);
-  --shadow: 0 1px 2px rgba(33, 28, 21, 0.05), 0 16px 40px -24px rgba(33, 28, 21, 0.22);
+  --mustard-soft: #f1e3c0;
+  --sage: #5f7f5e;
+  --line: rgba(38, 33, 26, 0.14);
+  --line-soft: rgba(38, 33, 26, 0.08);
+  --shadow: 0 1px 2px rgba(38, 33, 26, 0.05), 0 18px 44px -26px rgba(38, 33, 26, 0.28);
+  --shadow-sm: 0 1px 2px rgba(38, 33, 26, 0.05), 0 8px 22px -14px rgba(38, 33, 26, 0.22);
   --dawn-gradient: linear-gradient(135deg, #2b2f6b 0%, #8c3e20 55%, #c99a3c 100%);
-  --dawn-wash: linear-gradient(180deg, #eceaf2 0%, #f3e6d4 46%, #faf7f0 100%);
-  --grain-opacity: 0.03;
+  --earth-gradient: linear-gradient(135deg, #8c3e20 0%, #b0512c 45%, #c99a3c 100%);
+  --dawn-wash: linear-gradient(180deg, #e9e7ef 0%, #f3e4cd 48%, #f7f3e9 100%);
+  --clay-wash: linear-gradient(180deg, rgba(176,81,44,.07), rgba(176,81,44,.02));
+  --grain-opacity: 0.032;
   --d-dawn: 1200ms;
   --d-ray: 600ms;
   --d-settle: 350ms;

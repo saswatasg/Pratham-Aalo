@@ -11,12 +11,21 @@ export function Reveal({ children, delay = 0, className = '' }: { children: Reac
 }
 export function AlpanaDivider() {
   return (
-    <div className="mx-auto my-12 max-w-2xl px-6" aria-hidden>
-      <svg viewBox="0 0 600 32" className="w-full opacity-70" fill="none" style={{ color: 'var(--rust)' }}>
-        <circle cx="300" cy="16" r="4.5" stroke="currentColor" strokeWidth="1.25" />
-        <circle cx="300" cy="16" r="1.4" fill="currentColor" />
-        <path d="M40 16 H268 M332 16 H560" stroke="currentColor" strokeWidth="1" opacity="0.7" />
-        <path d="M120 16 l7 -6 7 6 -7 6 Z M466 16 l7 -6 7 6 -7 6 Z" stroke="currentColor" strokeWidth="1" opacity="0.8" />
+    <div className="mx-auto my-10 max-w-2xl px-6 md:my-12" aria-hidden>
+      <svg viewBox="0 0 600 44" className="w-full" fill="none" style={{ color: 'var(--clay)' }}>
+        {/* alpona centre: lotus-petal motif */}
+        <g stroke="currentColor" strokeWidth="1.2" opacity="0.85">
+          <path d="M300 8 c 6 6, 6 12, 0 18 c -6 -6, -6 -12, 0 -18" />
+          <path d="M286 14 c 8 1, 12 6, 12 12 c -8 -1, -12 -6, -12 -12" />
+          <path d="M314 14 c -8 1, -12 6, -12 12 c 8 -1, 12 -6, 12 -12" />
+        </g>
+        {/* field furrows running out both sides */}
+        <path d="M24 30 C 140 24, 220 24, 268 30" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <path d="M332 30 C 380 24, 460 24, 576 30" stroke="currentColor" strokeWidth="1" opacity="0.6" />
+        <path d="M60 37 C 150 33, 210 33, 252 37" stroke="currentColor" strokeWidth="0.8" opacity="0.35" />
+        <path d="M348 37 C 390 33, 450 33, 540 37" stroke="currentColor" strokeWidth="0.8" opacity="0.35" />
+        <circle cx="276" cy="30" r="1.6" fill="currentColor" opacity="0.7" />
+        <circle cx="324" cy="30" r="1.6" fill="currentColor" opacity="0.7" />
       </svg>
     </div>
   );

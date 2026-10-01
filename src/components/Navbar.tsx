@@ -26,9 +26,9 @@ export function Navbar() {
         <Link href={isBn ? '/bn' : '/'} className="flex items-center gap-2.5" aria-label="Pratham Aalo home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/icon.svg" alt="" width={30} height={30} style={{ opacity: 0.95 }} />
-          <span className="leading-tight">
-            <span className="block font-serif text-[17px] font-bold tracking-tight" lang={lang}>{lang === 'bn' ? 'প্রথম আলো' : 'Pratham Aalo'}</span>
-            <span className="block text-[10.5px] uppercase tracking-[0.14em]" style={{ color: 'var(--faint)' }}>{t.brand.descriptor}</span>
+          <span className="min-w-0 leading-tight">
+            <span className="block truncate font-serif text-[16px] font-bold tracking-tight sm:text-[17px]" lang={lang}>{lang === 'bn' ? 'প্রথম আলো' : 'Pratham Aalo'}</span>
+            <span className="hidden text-[10px] uppercase tracking-[0.14em] min-[380px]:block" style={{ color: 'var(--faint)' }}>{t.brand.descriptor}</span>
           </span>
         </Link>
         <nav className="ml-auto hidden items-center gap-5 text-[13.5px] lg:flex" aria-label="Primary">
